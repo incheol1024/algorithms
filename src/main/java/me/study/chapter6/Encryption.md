@@ -4,7 +4,7 @@
 첫째로, 공백은 텍스트에서 제거됩니다. 텍스트 L의 길이를 보자.
 그러면 문자들이 하나의 그리드로 쓰여졌고, 이것의 열과 행은 아래의 제약 조건을 갖습니다.
 
-예를 들어, 문장 s=if man was meant to stay on the ground got would have given roots 은, 공백 제거 후에
+예를 들어, 문장 *s=if man was meant to stay on the ground got would have given roots* 은, 공백 제거 후에
 54개의 긴 문자입니다. 루트54는 7과 8사이이며, 그래서 7행 8열의 그리드 형태로 쓰여졌습니다.
 
 
@@ -24,7 +24,9 @@ sroots
 예를 들어 위 사각형에 대한 인코드된 메세지는   
 imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau 입니다.  
 당신은 인코드와 출력할 메세지를 받을 것입니다.
-
+  
+  
+  
 -----------------------------------
 ##### Function Description  
 아래의 에디터안에 암호화 함수를 완성하세요. 이 함수는 설명 처럼 구성 된 단일 문자열을 리턴해야 합니다.
