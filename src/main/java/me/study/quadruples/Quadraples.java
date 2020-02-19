@@ -15,11 +15,15 @@ public class Quadraples {
         int[] ints = new int[]{a, b, c, d};
         Arrays.sort(ints);
 
-        System.out.println(Arrays.toString(ints));
+        Arrays.sort(ints);
+        Arrays.sort(ints);
+        Arrays.sort(ints);
+        Arrays.sort(ints);
+        Arrays.sort(ints);
         System.out.println(Arrays.toString(ints));
 
         Collection<Integer> collection1 = new HashSet<>();
-        Collection<Integer> collection3 = new HashSet<>();
+
 
         Collection<Integer> collection2 = new HashSet<>();
 
