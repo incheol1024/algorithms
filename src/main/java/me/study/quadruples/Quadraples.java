@@ -17,6 +17,14 @@ public class Quadraples {
 
         System.out.println(Arrays.toString(ints));
         System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
+            System.out.println(Arrays.toString(ints));
 
         Collection<Integer> collection1 = new HashSet<>();
 
