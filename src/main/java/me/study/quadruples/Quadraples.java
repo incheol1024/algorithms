@@ -15,52 +15,49 @@ public class Quadraples {
         int[] ints = new int[]{a, b, c, d};
         Arrays.sort(ints);
 
-        Arrays.sort(ints);
-        Arrays.sort(ints);
-        Arrays.sort(ints);
-        Arrays.sort(ints);
-        Arrays.sort(ints);
-        System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-            System.out.println(Arrays.toString(ints));
-
-        Collection<Integer> collection1 = new HashSet<>();
-
-
-        Collection<Integer> collection2 = new HashSet<>();
+        HashMap<String, Integer> firstMap = new HashMap<>(); //<Hash값, Xor값> a,b에 대한
+        HashMap<String, Integer> secondMap = new HashMap<>(); //<Hash값, Xor값> a,b에 대한
 
         for (int i = 1; i <= a; i++) {
             for (int j = 1; j <= b; j++) {
-                collection1.add(i ^ j);
+                if (firstMap.containsValue(i ^ j) && firstMap.containsKey(j + "" + i))
+                    continue;
+
+                firstMap.put(i + "" + j, i ^ j);
+//                System.out.println((i + "" + j) + ":" + (i ^ j));
             }
         }
 
+        System.out.println("=========");
         for (int i = 1; i <= c; i++) {
             for (int j = 1; j <= d; j++) {
-                collection2.add(i ^ j);
+                if (secondMap.containsValue(i ^ j) && secondMap.containsKey(j + "" + i))
+                    continue;
+
+                secondMap.put(i + "" + j, i ^ j);
+//                System.out.println((i + "" + j) + ":" + (i ^ j));
             }
         }
 
-        long sum = collection1.stream()
-                .mapToLong(integer -> {
-                    return Long.valueOf(collection2.stream()
-                            .filter(integer1 -> integer != integer1)
-                            .peek(integer1 -> {
-                                System.out.println(integer + " " + integer1);
-                            })
-                            .count());
-                })
-                .sum();
 
-        System.out.println(sum);
+//        System.out.println(firstMap.size());
+//        System.out.println(secondMap.size());
 
-        return 0;
+        HashSet<Integer> hashSet = new HashSet<>(5000);
+
+        firstMap.entrySet().stream()
+                .forEach(value -> {
+                    secondMap.keySet().stream().forEach(s -> {
+                        if (s.equals(value.getKey()) || secondMap.containsValue(value.getKey())) {
+                        } else {
+                            hashSet.add(Integer.valueOf(s) + Integer.valueOf(value.getKey()));
+                        }
+                    });
+                });
+
+
+        System.out.println(hashSet.size());
+        return hashSet.size();
     }
 
     private static int computeXOR(int[] integers) {
@@ -90,7 +87,7 @@ public class Quadraples {
 //
 //        int result = beautifulQuadruples(a, b, c, d);
 
-        int result = beautifulQuadruples(1, 2, 3, 4);
+        int result = beautifulQuadruples(34, 35, 1, 50);
 
 //        bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
