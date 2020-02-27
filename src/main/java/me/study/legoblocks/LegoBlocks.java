@@ -8,8 +8,6 @@ public class LegoBlocks {
     private static final Scanner scanner = new Scanner(System.in);
 
     static int legoBlocks(int n, int m) {  // n 행, m 열
-
-
         //짝대기 수
         int lineNumber = n * (m - 1);
 
@@ -20,21 +18,14 @@ public class LegoBlocks {
         //버티컬 짝대기 하나를 제외한 짝대기 수
         int notVLine = lineNumber - n;
 
-        // 중복 제거 수
-        int duplicationNumber = (int) Math.pow(2, notVLine);
+        double v = Math.pow(2, notVLine) * (m - 1); // 빼야됨
+//        System.out.println("---: " + v);
 
+        double v1 = Math.pow(2, n) * (m - 1);
+//        System.out.println("+++: " + v1);
+//        System.out.println(totalNumber - v + v1 - 1);
 
-        if (m > 3) {
-            duplicationNumber = duplicationNumber * (m-1);
-            System.out.println(duplicationNumber);
-        }
-
-        int result = totalNumber - duplicationNumber + 1;
-
-        System.out.println("===result===");
-        System.out.println(result);
-
-        return result;
+        return (int) (totalNumber - v + v1 - 1);
     }
 
 
@@ -60,6 +51,6 @@ public class LegoBlocks {
 
         bufferedWriter.close();
 */
-        legoBlocks(4, 4);
+        legoBlocks(2, 3);
     }
 }
