@@ -1,8 +1,7 @@
-package me.study.programmers;
+package me.study.programmers.levelone;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class KthNumber {

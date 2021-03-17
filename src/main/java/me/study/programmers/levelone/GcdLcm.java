@@ -1,4 +1,4 @@
-package me.study.programmers;
+package me.study.programmers.levelone;
 
 public class GcdLcm {
 
