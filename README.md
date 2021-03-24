@@ -1,5 +1,2 @@
 ##### 알고리즘 스터디를 위한 레포지터리입니다.
-##### HackerRank 사이트의 문제를 푼 후 테스트코드가 작성됩니다.
-
-
-[해커랭크 바로가기](https://www.hackerrank.com/dashboard)
+##### HackerRank, 프로그래머스 사이트의 문제를 풀어 기록하는 곳입니다.
