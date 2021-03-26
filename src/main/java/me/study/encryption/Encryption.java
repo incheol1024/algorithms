@@ -12,9 +12,9 @@ public class Encryption {
         originString = originString.replaceAll(" ", "");      // 공백 제거
         int stringLength = originString.length();
         int row = (int) Math.sqrt(stringLength);  // row, column 값 구하기
-        int column =  row;
+        int column = row;
 
-        if(row != Math.sqrt(stringLength)) // 루트값이 딱 떨어지지 않는 경우 컬럼에 + 1
+        if (row != Math.sqrt(stringLength)) // 루트값이 딱 떨어지지 않는 경우 컬럼에 + 1
             column++;
 
         if (stringLength > (row * column)) // 로우 * 컬럼이 문자열 길이보다 작아야 하는 제약 조건 확인

@@ -28,7 +28,7 @@ public class EncryptionTest {
     @Test
     public void encryption() {
         String actual = Encryption.encryption(input);
-        MatcherAssert.assertThat("reason",actual, IsNot.not(input));
+        MatcherAssert.assertThat("reason", actual, IsNot.not(input));
         MatcherAssert.assertThat(actual, StringContains.containsString(output));
         MatcherAssert.assertThat(actual, Is.is(CoreMatchers.equalTo(output)));
 
